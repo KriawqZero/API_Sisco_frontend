@@ -1,7 +1,7 @@
 import {type RouteLocationNormalized} from 'vue-router';
 
 export default async function authMiddleware(
-  to: RouteLocationNormalized, from: RouteLocationNormalized, next: (route?: string | { name: string }) => void) {
+  to: RouteLocationNormalized, _from: RouteLocationNormalized, next: (route?: string | { name: string }) => void) {
   // Import the auth store
   const {useAuthStore} = await import('../store/auth');
   const auth = useAuthStore();

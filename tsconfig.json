@@ -28,8 +28,8 @@
   },
   "include": ["src/**/*.ts", "src/**/*.vue", "src/**/*.tsx"], // Adicionado
   "exclude": ["node_modules", "dist", "eslint.config.js"], // Modificado
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  //"references": [
+  //  { "path": "./tsconfig.app.json" },
+  //  { "path": "./tsconfig.node.json" }
+  //]
 }

@@ -2,9 +2,8 @@
 import { ref, onMounted } from 'vue';
 import { fetchSingleFeedback } from '../api/feedbackService';
 import { useRoute, useRouter } from 'vue-router';
-import config from '../config/env';
-import FeedbackDetail from '@/components/FeedbackDetail.vue';
-import LoadingSpinner from '@/components/LoadingSpinner.vue';
+import FeedbackDetail from '../components/FeedbackDetail.vue';
+import LoadingSpinner from '../components/LoadingSpinner.vue';
 
 const router = useRouter();
 const route = useRoute();
@@ -14,7 +13,7 @@ const feedback = ref(null); // <-- Adicione esta linha
 
 onMounted(async () => {
 	try {
-		feedback.value = await fetchSingleFeedback(route.params.id);
+		feedback.value = await fetchSingleFeedback(Number(route.params.id));
 	} catch (error) {
 		console.error(error);
 	} finally {

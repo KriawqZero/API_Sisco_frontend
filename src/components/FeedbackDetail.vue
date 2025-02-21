@@ -2,8 +2,8 @@
 import { formatDate } from '../utils/dateFormatter';
 import { getFileUrl } from '../api/feedbackService';
 
-const openFile = (id) => {
-	window.open(getFileUrl(id), '_blank');
+const openFile = (id: string) => {
+	window.open(getFileUrl(Number(id)), '_blank');
 };
 
 // Defina as props corretamente

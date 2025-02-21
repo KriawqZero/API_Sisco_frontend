@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref, onMounted } from 'vue';
   import { useRouter } from 'vue-router';
-  import { fetchFeedbacks, fetchSingleFeedback, getFileUrl } from '../api/feedbackService';
+  import { fetchFeedbacks, getFileUrl } from '../api/feedbackService';
   import { formatDate } from '../utils/dateFormatter';
   import type { Feedback } from '../types/feedback';
   import PaginationControls from '@/components/PaginationControls.vue';
